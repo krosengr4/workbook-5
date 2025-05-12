@@ -1,16 +1,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        Cat myCat = new Cat();
+        Cat myCat = new Cat("Bambu", 9, "Tuxedo");
 
-        //Because Cat is a child of Animal, we can set and get name and age, which were defined in Animal class
-        myCat.setAge(9);
-        myCat.setName("Bambu");
+        //Because Cat is a child of Animal, we can set and get name and age, which were defined in Animal.java class
         System.out.println("My cat, " + myCat.getName() + ", is " + myCat.getAge() + " years old.");
 
-        //We can also set the breed, which was defined in Animal class
-        myCat.setBreed("Tuxedo");
+        //We can also set the breed, which was defined in Cat.java class
         System.out.println(myCat.getName() + " is a " + myCat.getBreed());
+
+        //Another example with a Dog in Dog.java class
+        Dog newDog = new Dog("Spot", 2, "Dalmatian");
+        System.out.printf("%s is %d years old. He is a %s", newDog.getName(), newDog.getAge(), newDog.getBreed());
 
     }
 }

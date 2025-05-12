@@ -2,10 +2,12 @@ public class Animal {
 
     //We start off with our parent class
 
-    int age;
     String name;
+    int age;
 
-    public Animal() {
+    public Animal (String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     //region getters and setters
