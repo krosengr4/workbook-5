@@ -1,6 +1,7 @@
 public class Animal {
 
-    //We start off with our
+    //We start off with our parent class
+
     int age;
     String name;
 

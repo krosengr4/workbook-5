@@ -1,6 +1,6 @@
 public class Cat extends Animal {
-//    ! The extends keyword makes Developer class a child of Person class
-//    ! This means all the fields in Person are inherited by Developer
+//    ! The extends keyword makes Cat class a child of Animal class
+//    ! This means all the fields in Animal are inherited by Cat
 
     String breed;
 
