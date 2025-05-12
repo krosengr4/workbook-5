@@ -1,15 +1,10 @@
-public class Person {
+public class Animal {
 
     //We start off with our
     int age;
     String name;
 
-    public Person() {
-    }
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
+    public Animal() {
     }
 
     //region getters and setters
