@@ -1,9 +1,18 @@
+import java.security.PublicKey;
+
 public class Vehicle {
 
     String color;
     int numberOfPassengers;
     int cargoCapacity;
     int fuelCapacity;
+
+    public Vehicle(String color, int numberOfPassengers, int cargoCapacity, int fuelCapacity) {
+        this.color = color;
+        this.numberOfPassengers = numberOfPassengers;
+        this.cargoCapacity = cargoCapacity;
+        this.fuelCapacity = fuelCapacity;
+    }
 
     //region getters and setters
     public String getColor() {

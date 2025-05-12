@@ -2,20 +2,13 @@ public class VehiclesMain {
 
     public static void main(String[] args) {
 
-        Moped slowRide = new Moped();
-        slowRide.setColor("Red");
-        slowRide.setFuelCapacity(5);
+        Moped slowRide = new Moped("Red", 2, 1, 5);
 
-        Hovercraft hoverRide = new Hovercraft();
-        hoverRide.setColor("Blue");
-        hoverRide.setNumberOfPassengers(1);
+        Hovercraft hoverRide = new Hovercraft("Blue", 1, 0, 4);
 
-        Car speedyCar = new Car();
-        speedyCar.setColor("Yellow");
-        speedyCar.setFuelCapacity(35);
+        Car speedyCar = new Car("Yellow", 5, 6, 35);
 
-        SemiTruck megaTruck = new SemiTruck();
-        megaTruck.setCargoCapacity(24);
+        SemiTruck megaTruck = new SemiTruck("Orange", 8, 24, 18);
 
         System.out.println("My semi truck can hold " + megaTruck.getCargoCapacity() + " tons.");
         System.out.println("My car is " + speedyCar.getColor() + " and has a fuel capacity of " + speedyCar.getFuelCapacity());
