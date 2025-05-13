@@ -1,6 +1,15 @@
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
+
+        inheritanceBasics();
+        overridingMethods();
+        arrayListOfAnimals();
+    }
+
+    public static void inheritanceBasics () {
         Cat myCat = new Cat("Bambu", 9, "Tuxedo");
 
         //Because Cat is a child of Animal, we can set and get name and age, which were defined in Animal.java class
@@ -12,11 +21,27 @@ public class Main {
         //Another example with a Dog object in Dog.java class
         Dog newDog = new Dog("Spot", 2, "Dalmatian");
         System.out.printf("%s is %d years old. He is a %s\n", newDog.getName(), newDog.getAge(), newDog.getBreed());
+    }
 
-
+    public static void overridingMethods() {
         //We override these methods so that in each class, they print out something different
         Animal.eat();
         Dog.eat();
         Cat.eat();
+    }
+
+    public static void arrayListOfAnimals() {
+        Animal a1;
+        a1 = new Cat("Max", 11, "Tuxedo");
+
+        Cat c1 = new Cat ("Alex", 2, "Jungle");
+        Dog d1 = new Dog("Spot", 5, "Golden Retriever");
+
+        //Because this array list is of Animal objects, we can add both dogs and cats
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(a1);
+        animals.add(c1);
+        System.out.println(animals.toArray().length);
+
     }
 }
