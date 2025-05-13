@@ -52,13 +52,13 @@ public class AssetVehicle extends Asset{
 
         switch (carAge) {
             case 0, 1, 2, 3:
-                totalValue += this.originalCost - (.03 * this.originalCost);
+                totalValue += this.originalCost - ((.03 * carAge) * this.originalCost);
                 break;
             case 4, 5, 6:
-                totalValue += this.originalCost - (.06 * this.originalCost);
+                totalValue += this.originalCost - ((.06 * carAge) * this.originalCost);
                 break;
             case 7, 8, 9, 10:
-                totalValue += this.originalCost - (.08 * this.originalCost);
+                totalValue += this.originalCost - ((.08 * carAge) * this.originalCost);
                 break;
             default:
                 if (carAge < 0) {
