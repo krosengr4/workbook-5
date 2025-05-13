@@ -7,6 +7,7 @@ public class Main {
         inheritanceBasics();
         overridingMethods();
         arrayListOfAnimals();
+        exampleInstanceOf();
     }
 
     public static void inheritanceBasics () {
@@ -42,6 +43,34 @@ public class Main {
         animals.add(a1);
         animals.add(c1);
         System.out.println(animals.toArray().length);
+    }
 
+    public static void exampleInstanceOf() {
+        Cat myCat = new Cat("Bambu", 9, "Tuxedo");
+        Dog newDog = new Dog("Spot", 2, "Dalmatian");
+        Animal a1;
+        a1 = new Cat("Max", 11, "Tuxedo");
+
+//        Animal animal = new Animal()
+
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(myCat);
+        animals.add(newDog);
+        animals.add(a1);
+
+        //for all the animals in the List
+        for (Animal a : animals) {
+            //if instance a is a Cat object
+            if (a instanceof Cat) {
+                System.out.println(a.getName() + " says ");
+                //!Casting to force instance a to be a cat
+                ((Cat)a).eat();
+            }
+            if (a instanceof Dog) {
+                //Casting newDog instance to d2
+                Dog d2 = (Dog)a;
+                System.out.println(d2.getName());
+            }
+        }
     }
 }
