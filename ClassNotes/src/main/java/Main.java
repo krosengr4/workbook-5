@@ -9,9 +9,14 @@ public class Main {
         //We can also set the breed, which was defined in Cat.java class
         System.out.println(myCat.getName() + " is a " + myCat.getBreed());
 
-        //Another example with a Dog in Dog.java class
+        //Another example with a Dog object in Dog.java class
         Dog newDog = new Dog("Spot", 2, "Dalmatian");
-        System.out.printf("%s is %d years old. He is a %s", newDog.getName(), newDog.getAge(), newDog.getBreed());
+        System.out.printf("%s is %d years old. He is a %s\n", newDog.getName(), newDog.getAge(), newDog.getBreed());
 
+
+        //We override these methods so that in each class, they print out something different
+        Animal.eat();
+        Dog.eat();
+        Cat.eat();
     }
 }

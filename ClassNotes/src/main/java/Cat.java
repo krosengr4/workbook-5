@@ -18,5 +18,9 @@ public class Cat extends Animal {
         return breed;
     }
 
+    public static void eat() {
+        System.out.println("Nom Nom Nom");
+    }
+
 
 }

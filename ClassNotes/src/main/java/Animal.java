@@ -27,4 +27,8 @@ public class Animal {
         this.name = name;
     }
     //endregion
+
+    public static void eat() {
+        System.out.println("Munch Munch");
+    }
 }

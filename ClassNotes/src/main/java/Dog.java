@@ -15,5 +15,9 @@ public class Dog extends Animal{
         return breed;
     }
 
+    public static void eat() {
+        System.out.println("Chomp Chomp");
+    }
+
 
 }
