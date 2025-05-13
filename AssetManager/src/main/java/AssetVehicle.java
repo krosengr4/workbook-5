@@ -67,7 +67,7 @@ public class AssetVehicle extends Asset{
                 totalValue += 1000.00;
         }
 
-        if (!this.makeModel.contains("Honda") && !this.makeModel.contains("Toyota")) {
+        if (!this.makeModel.toLowerCase().contains("honda") && !this.makeModel.toLowerCase().contains("toyota")) {
             if (odometer > 100000) {
                 totalValue = this.originalCost - (this.originalCost * .25);
             }
