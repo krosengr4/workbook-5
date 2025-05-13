@@ -51,8 +51,6 @@ public class Main {
         Animal a1;
         a1 = new Cat("Max", 11, "Tuxedo");
 
-//        Animal animal = new Animal()
-
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(myCat);
         animals.add(newDog);
@@ -67,7 +65,7 @@ public class Main {
                 ((Cat)a).eat();
             }
             if (a instanceof Dog) {
-                //Casting newDog instance to d2
+                //Casting newDog instance to new instance called d2
                 Dog d2 = (Dog)a;
                 System.out.println(d2.getName());
             }
