@@ -1,3 +1,5 @@
+package inheritance.animals;
+
 public class Animal {
 
     //We start off with our parent class

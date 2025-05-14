@@ -1,8 +1,10 @@
-public class Dog extends Animal{
+package inheritance.animals;
+
+public class Dog extends Animal {
 
     String breed;
 
-    //Use the super keyword in constructor to specify that age and name are from Animal constructor
+    //Use the super keyword in constructor to specify that age and name are from inheritance.animals.Animal constructor
     public Dog (String name, int age, String breed) {
         super(name, age);
         this.breed = breed;
