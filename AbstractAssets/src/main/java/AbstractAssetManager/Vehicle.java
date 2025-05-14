@@ -50,6 +50,16 @@ public class Vehicle extends Asset{
         int currentYear = Integer.parseInt(currentDate.format(yearFormat));
 
         int carAge = currentYear - this.year;
+//
+//        double totalPercentDevalue = 0;
+//
+//        for (int i = 0; i < carAge; i++) {
+//            if (i <= 3) {
+//                totalPercentDevalue += .03;
+//            } if (i >= 4 && i <= 6) {
+//                totalPercentDevalue += .06;
+//            }
+//        }
 
         switch (carAge) {
             case 0, 1, 2, 3:
