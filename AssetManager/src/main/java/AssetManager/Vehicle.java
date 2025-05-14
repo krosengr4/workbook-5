@@ -1,13 +1,15 @@
+package AssetManager;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class AssetVehicle extends Asset{
+public class Vehicle extends Asset {
 
     String makeModel;
     int year;
     int odometer;
 
-    public AssetVehicle(String description, String dateAcquired, double originalCost, String makeModel, int year, int odometer) {
+    public Vehicle(String description, String dateAcquired, double originalCost, String makeModel, int year, int odometer) {
         super(description, dateAcquired, originalCost);
         this.makeModel = makeModel;
         this.year = year;

@@ -1,3 +1,5 @@
+package AssetManager;
+
 public class Asset {
 
     String description;

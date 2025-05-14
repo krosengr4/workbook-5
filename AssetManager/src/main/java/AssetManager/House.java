@@ -1,4 +1,6 @@
-public class AssetHouse extends Asset{
+package AssetManager;
+
+public class House extends Asset {
 
     String address;
     // 1=excellent 2=good 3=fair 4=poor
@@ -6,7 +8,7 @@ public class AssetHouse extends Asset{
     int squareFoot;
     int lotSize;
 
-    public AssetHouse(String description, String dateAcquired, double originalCost, String address, int condition, int squareFoot, int lotSize) {
+    public House(String description, String dateAcquired, double originalCost, String address, int condition, int squareFoot, int lotSize) {
         super(description, dateAcquired, originalCost);
         this.address = address;
         this.condition = condition;
