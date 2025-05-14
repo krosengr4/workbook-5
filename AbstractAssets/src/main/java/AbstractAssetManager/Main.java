@@ -19,7 +19,7 @@ public class Main {
                         a.getDescription(), a.getDateAcquired(), a.getOriginalCost(), a.getValue(), ((Vehicle) a).getMakeModel());
             } else if (a instanceof Cash) {
                 System.out.println("\t\t---CASH---");
-                System.out.printf("Description: %s | Date Acquired: %s | Value: $%.2f", a.getDescription(), a.getDateAcquired(), a.getValue());
+                System.out.printf("Description: %s | Date Acquired: %s | Value: $%.2f\n", a.getDescription(), a.getDateAcquired(), a.getValue());
             }
         }
     }
@@ -30,6 +30,7 @@ public class Main {
         House myHouse = new House("My usual house", "11-11-1995", 450000.00, "9851 Normal Dr", 3, 1100, 1);
         Vehicle myCar = new Vehicle("My main car", "12-23-2015", 50000.00, "Honda Accord", 2015, 135000);
         Vehicle luxuryCar = new Vehicle("My luxury car", "9-2-2018", 75500.00, "Audi R8", 2018, 22823);
+        Vehicle workTruck = new Vehicle("The truck I use for work", "12/12/2022", 20000.00, "Ram 1500", 2020, 15000);
         Cash birthdayCash = new Cash("Cash from my birthday", "5/12/2025", 200.00);
         Cash garageSaleCash = new Cash("Cash from my garage sale", "02/12/2025", 523.89);
 
@@ -38,6 +39,7 @@ public class Main {
         assets.add(myHouse);
         assets.add(myCar);
         assets.add(luxuryCar);
+        assets.add(workTruck);
         assets.add((birthdayCash));
         assets.add(garageSaleCash);
 

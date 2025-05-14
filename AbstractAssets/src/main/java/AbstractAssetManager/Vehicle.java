@@ -44,38 +44,20 @@ public class Vehicle extends Asset{
 
     @Override
     public double getValue() {
-        double totalValue = 0;
+
         LocalDate currentDate = LocalDate.now();
         DateTimeFormatter yearFormat = DateTimeFormatter.ofPattern("yyyy");
         int currentYear = Integer.parseInt(currentDate.format(yearFormat));
 
         int carAge = currentYear - this.year;
-//
-//        double totalPercentDevalue = 0;
-//
-//        for (int i = 0; i < carAge; i++) {
-//            if (i <= 3) {
-//                totalPercentDevalue += .03;
-//            } if (i >= 4 && i <= 6) {
-//                totalPercentDevalue += .06;
-//            }
-//        }
 
-        switch (carAge) {
-            case 0, 1, 2, 3:
-                totalValue += this.originalCost - ((.03 * carAge) * this.originalCost);
-                break;
-            case 4, 5, 6:
-                totalValue += this.originalCost - ((.06 * carAge) * this.originalCost);
-                break;
-            case 7, 8, 9, 10:
-                totalValue += this.originalCost - ((.08 * carAge) * this.originalCost);
-                break;
-            default:
-                if (carAge < 0) {
-                    throw new RuntimeException("Cannot have negative car age!");
-                }
-                totalValue += 1000.00;
+        double totalValue = 0;
+        double totalPercentDevalue = getTotalPercentDevalue(carAge);
+
+        if (carAge > 10) {
+            totalValue = 1000.00;
+        } else {
+            totalValue = this.originalCost - (totalPercentDevalue * this.originalCost);
         }
 
         if (!this.makeModel.toLowerCase().contains("honda") && !this.makeModel.toLowerCase().contains("toyota")) {
@@ -84,5 +66,22 @@ public class Vehicle extends Asset{
             }
         }
         return totalValue;
+    }
+
+     static double getTotalPercentDevalue(int carAge) {
+        double totalPercentDevalue = 1;
+
+        for (int i = 1; i <= carAge; i++) {
+            if (i <= 3) {
+                totalPercentDevalue *= 1 - .03;
+            }
+            else if (i <= 6) {
+                totalPercentDevalue *= 1 - .06;
+            }
+            else if (i <= 10){
+                totalPercentDevalue *= 1 - .08;
+            }
+        }
+        return totalPercentDevalue;
     }
 }
