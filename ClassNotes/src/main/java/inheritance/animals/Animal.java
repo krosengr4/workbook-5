@@ -1,12 +1,12 @@
 package inheritance.animals;
 
+//!Parent class of Cat and Dog classes
 public class Animal {
-
-    //We start off with our parent class
 
     String name;
     int age;
 
+    //Animal constructor
     public Animal (String name, int age) {
         this.name = name;
         this.age = age;

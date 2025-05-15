@@ -1,5 +1,6 @@
 package inheritance.animals;
 
+//!keyword extends makes dog a child class of animal
 public class Dog extends Animal {
 
     String breed;
@@ -10,13 +11,16 @@ public class Dog extends Animal {
         this.breed = breed;
     }
 
+    //region getter and setter
     public void setBreed(String breed) {
         this.breed = breed;
     }
     public String getBreed() {
         return breed;
     }
+    //endregion
 
+    //Override eat() method to print out different message for Dog object
     public static void eat() {
         System.out.println("Chomp Chomp");
     }

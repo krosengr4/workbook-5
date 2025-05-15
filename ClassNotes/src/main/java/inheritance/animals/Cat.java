@@ -12,6 +12,7 @@ public class Cat extends Animal {
         this.breed = breed;
     }
 
+    //region getter and setter
     public void setBreed(String breed) {
         this.breed = breed;
     }
@@ -19,7 +20,9 @@ public class Cat extends Animal {
     public String getBreed() {
         return breed;
     }
+    //endregion
 
+    //Override eat() method to print out different message for Cat object
     public static void eat() {
         System.out.println("Nom Nom Nom");
     }

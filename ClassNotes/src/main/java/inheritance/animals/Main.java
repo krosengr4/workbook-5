@@ -6,6 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //calling methods
         inheritanceBasics();
         overridingMethods();
         arrayListOfAnimals();
@@ -13,9 +14,11 @@ public class Main {
     }
 
     public static void inheritanceBasics () {
+        //Instantiating and declaring new cat object
         Cat myCat = new Cat("Bambu", 9, "Tuxedo");
 
-        //Because inheritance.animals.Cat is a child of inheritance.animals.Animal, we can set and get name and age, which were defined in inheritance.animals.Animal.java class
+        //Because inheritance.animals.Cat is a child of inheritance.animals.Animal,
+        //we can set and get name and age, which were defined in inheritance.animals.Animal.java class
         System.out.println("My cat, " + myCat.getName() + ", is " + myCat.getAge() + " years old.");
 
         //We can also set the breed, which was defined in inheritance.animals.Cat.java class
@@ -34,9 +37,9 @@ public class Main {
     }
 
     public static void arrayListOfAnimals() {
+        //Instantiating and declaring new Cat and Dog objects
         Animal a1;
         a1 = new Cat("Max", 11, "Tuxedo");
-
         Cat c1 = new Cat ("Alex", 2, "Jungle");
         Dog d1 = new Dog("Spot", 5, "Golden Retriever");
 
@@ -51,8 +54,7 @@ public class Main {
     public static void exampleInstanceOf() {
         Cat myCat = new Cat("Bambu", 9, "Tuxedo");
         Dog newDog = new Dog("Spot", 2, "Dalmatian");
-        Animal a1;
-        a1 = new Cat("Max", 11, "Tuxedo");
+        Animal a1 = new Cat("Max", 11, "Tuxedo");
 
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(myCat);
