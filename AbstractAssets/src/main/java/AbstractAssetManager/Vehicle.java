@@ -52,11 +52,12 @@ public class Vehicle extends Asset{
         int carAge = currentYear - this.year;
 
         double totalValue = 0;
-        double totalPercentDevalue = getTotalPercentDevalue(carAge);
+
 
         if (carAge > 10) {
             totalValue = 1000.00;
         } else {
+            double totalPercentDevalue = getTotalPercentDevalue(carAge);
             totalValue = this.originalCost - (totalPercentDevalue * this.originalCost);
         }
 

@@ -44,6 +44,7 @@ public class Main {
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(a1);
         animals.add(c1);
+        animals.add(d1);
         System.out.println(animals.toArray().length);
     }
 
